@@ -1,7 +1,6 @@
-#+TITLE: Learning
+#+TITLE: emacs-my-manual
 * Learning journey
-** Emacs - a good place to start
-*** Elisp
+** Doom Emacs more esoteric controls - a good place to start
 *** Keybindings
 **** Normal (sometimes any) mode
 ***** =g=
@@ -301,19 +300,3 @@ pressing return you would get
 **** lion - indents
 - try glip. on a numbered list - pause after =i= to see options
 
-* Stef - https://www.youtube.com/watch?v=muSNl2AB46s
-1. Concentrate on fundamentals
-   - How to use IDE (Doomemacs)
-   - Go conncurency
-   - TS/React
-   - Elisp
-
-2. Learn on a need to know basis
-3. Faster write time is more important than a fast runtime
-4. Open is better than closed - with regards to all tech
-5. Market forces are more important than nerd opinions / tech advantage
-6. Don't jump on tech as an early adopters
-7. Simple code is prettier code (better to understand)
-8. Code should be self describing
-9. Code should be fine grained (A thing should do one thing)
-10. Don't marry a language or framework
