@@ -1,4 +1,4 @@
-#+title: Elisp
+#+title: emacs-my-manual
 
 * Elsip
 
