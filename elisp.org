@@ -8,7 +8,7 @@
 
 #+begin_src elisp
 (setq name-of-thing "thing")
-(message name-of-thing)
+(message name-of-thing) ;; "thing"
 #+end_src
 
 #+RESULTS:
@@ -19,8 +19,8 @@
 #+begin_src elisp
 (setq name-of-thing "global thing")
 (let ((name-of-thing "local thing"))
-(message name-of-thing))
-(message name-of-thing)
+(message name-of-thing)) ;; "local thing"
+(message name-of-thing)  ;; "global thing"
 
 #+end_src
 
@@ -33,6 +33,8 @@
 (defun do-a-thing (arg)
   (format "I am a function that takes an argument and writes it on the end of this sentence: \n%s\n" arg))
 (do-a-thing "I am the argument that was passed in!")
+;; : I am a function that takes an argument and writes it on the end of this sentence:
+;; : I am the argument that was passed in!
 #+end_src
 
 #+RESULTS:
@@ -41,15 +43,15 @@
 *** read-from-minibuffer - prompt a user for input
 
 #+begin_src elisp
-
  (let ((prompted-thing (read-from-minibuffer "Hey, give me a word: ")))
  (message (format "Your word == %s" prompted-thing)
   ))
+;; First you get asked `Hey, give me a word: `  to which if you type "dog\n"
+;; You get fed back `Your word == dog`
 #+end_src
 
 #+RESULTS:
 : Your word == dog
-
 
 ** Types
 *** Types are boring - string, numbers etc I'll back fill this
@@ -69,7 +71,6 @@
 #+end_src
 
 #+RESULTS:
-: dog
 
 ** Given useful functions
 *** progn - string together a list of sexps
@@ -82,7 +83,7 @@
   (push  "dino chicken" my-list)
   (print my-list)
   )
-
+;; | dinochicken | cat | dog |
 #+end_src
 
 #+RESULTS:
@@ -94,16 +95,9 @@
   (setq my-list '("dog" "cat" "dino chicken"))
   (mapcar 's-upper-camel-case my-list)
 
+;; | Dog | Cat | DinoChicken |
 #+end_src
 
 #+RESULTS:
 | Dog | Cat | DinoChicken |
 ** Looping logic
-
-#+begin_src elisp
-
-(let (prompted-thing ((read-from-minibuffer "Hey, give me a number: ")))
-
-  )
-
-#+end_src
